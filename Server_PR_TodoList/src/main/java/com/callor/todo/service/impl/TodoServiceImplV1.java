@@ -36,7 +36,7 @@ public class TodoServiceImplV1 implements TodoService {
 			tdVO.setTd_time(rSet.getString(DBInfo.td_time));
 			tdVO.setTd_place(rSet.getString(DBInfo.td_place));
 			
-			System.out.println(tdList.toString());
+//			System.out.println(tdList.toString());
 			
 			tdList.add(tdVO);
 			

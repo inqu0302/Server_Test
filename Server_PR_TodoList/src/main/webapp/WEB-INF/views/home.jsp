@@ -26,6 +26,8 @@
 			</tr>				
 		</c:forEach>
 	</table>
-
+	<form>
+	<button>작성하기</button>
+	</form>
 </body>
 </html>

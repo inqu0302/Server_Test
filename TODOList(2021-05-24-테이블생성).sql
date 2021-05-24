@@ -31,3 +31,7 @@ CREATE VIEW view_해야할일 AS
     )ORDER BY td_date DESC;
 
 SELECT * FROM view_해야할일;
+
+SELECT * FROM tbl_todo
+ORDER BY td_date DESC, td_time DESC;
+
