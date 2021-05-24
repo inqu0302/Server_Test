@@ -14,7 +14,7 @@
 			<th>해야할일</th>
 			<th>작성일자</th>
 			<th>작성시간</th>
-			<th>장소</th> 
+			<th>장소</th>      
 		<tr>
 		<c:forEach items="${TDLIST}" var="TD" varStatus="status">
 			<tr>
