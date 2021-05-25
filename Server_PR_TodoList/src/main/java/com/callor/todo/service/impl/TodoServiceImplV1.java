@@ -107,7 +107,6 @@ public class TodoServiceImplV1 implements TodoService {
 		// TODO 새로운 데이터 작성
 		
 		String sql = " INSERT INTO tbl_todo ";
-		sql += " (td_seq, td_todo, td_date, td_time, td_place) ";
 		sql += " VALUES (seq_todo.NEXTVAL, ?, ?, ?, ?) ";
 		
 		PreparedStatement pStr = null;
@@ -119,7 +118,7 @@ public class TodoServiceImplV1 implements TodoService {
 			pStr.setString(3, tdVO.getTd_time());
 			pStr.setString(4, tdVO.getTd_place());
 			
-			Integer result = pStr.executeUpdate(sql);
+			Integer result = pStr.executeUpdate();
 			
 			pStr.close();
 			
@@ -138,7 +137,7 @@ public class TodoServiceImplV1 implements TodoService {
 		
 		String sql = " UPDATE tbl_todo SET ";
 		sql += " td_todo = ? , td_date = ? , td_time = ? , td_place = ? ";
-		sql += " WEHERE td_seq = ? ";
+		sql += " WHERE td_seq = ? ";
 		
 		PreparedStatement pStr = null;
 		
@@ -150,7 +149,7 @@ public class TodoServiceImplV1 implements TodoService {
 			pStr.setString(4, tdVO.getTd_place());
 			pStr.setLong(5, tdVO.getTd_seq());
 			
-			Integer result = pStr.executeUpdate(sql);
+			Integer result = pStr.executeUpdate();
 			
 			pStr.close();
 			
@@ -178,7 +177,7 @@ public class TodoServiceImplV1 implements TodoService {
 			pStr = dbConn.prepareStatement(sql);
 			pStr.setLong(1, seq);
 			
-			Integer result = pStr.executeUpdate(sql);
+			Integer result = pStr.executeUpdate();
 			pStr.close();
 			
 			return result;

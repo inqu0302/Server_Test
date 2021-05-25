@@ -1,0 +1,35 @@
+@charset "UTF-8";
+
+
+* {
+	margin: 0;
+	padding: 0;
+	box-sizing: border-box;
+}
+
+h1 {
+	color:white;
+	text-align:center;
+	background-color: violet;
+
+}
+
+	table{
+	border-collapse: collapse;
+	width:80%;
+	margin:5px auto;
+	}
+	
+	td,th{
+		border: 1px solid black;
+		padding:5px;
+		text-align: center;
+	}
+	
+	 th {
+  	  background-color: #bbdefb;
+ 	 }
+ 	 
+  	td {
+  	  background-color: #e3f2fd;
+	}

@@ -33,9 +33,9 @@ public class HomeController extends HttpServlet{
 		
 		req.setAttribute("TDLIST", tdList);
 		
-		req.getRequestDispatcher("WEB-INF/views/home.jsp").forward(req, resp);
+		System.out.println(tdList.toString());
 		
-		
+		RequestForwardController.forward(req, resp, "home");
 		
 	}
 
